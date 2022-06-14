@@ -1,11 +1,16 @@
+// React imports
 import { useContext, useState } from "react";
+import { CurrencyContext } from "../contexts/CurrencyContext";
+
+// Component imports
 import Coin from "../components/Coin";
 import CurrencySelect from "../components/CurrencySelect";
 import InformationBar from "../components/InformationBar";
 import Loading from "../components/Loading";
 import Search from "../components/Search";
 import SortBy from "../components/SortBy";
-import { CurrencyContext } from "../contexts/CurrencyContext";
+
+// Custom hooks
 import useFetch from "../hooks/useMarketFetch";
 
 export default function CoinView() {
@@ -13,6 +18,7 @@ export default function CoinView() {
   const [sortBy, setSortBy] = useState(`market_cap_desc`);
   const { urlCurrency, changeUrlCurrency, changeCurrency } =
     useContext(CurrencyContext);
+
   const {
     data: coins,
     errorMessage,
@@ -23,11 +29,9 @@ export default function CoinView() {
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
-
   const handleSorting = (e) => {
     setSortBy(e.target.value);
   };
-
   const handleCurrency = (e) => {
     changeUrlCurrency(e.target.value);
     changeCurrency(e.target.value);
