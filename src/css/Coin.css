@@ -1,3 +1,13 @@
+.information-bar {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.information-bar h3 {
+  font-size: 1.2rem !important;
+}
+
 .coin-container {
   display: flex;
   justify-content: center;
@@ -10,13 +20,14 @@
   align-items: center;
   height: 80px;
   border-bottom: 1px solid #d7d7d7;
+  width: 70vw;
 }
 
 .coin {
   display: flex;
   align-items: center;
   padding-right: 24px;
-  min-width: 300px;
+  min-width: 40%;
 }
 
 .coin img {
@@ -27,11 +38,16 @@
 
 .coin h3 {
   font-size: 16px;
-  width: 150px;
+  width: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .coin-symbol {
   text-transform: uppercase;
+  max-width: 30%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .coin-data {
@@ -42,15 +58,15 @@
 }
 
 .coin-price {
-  width: 110px;
+  width: 10%;
 }
 
 .coin-volume {
-  width: 200px;
+  width: 30%;
 }
 
 .coin-marketCap {
-  width: 240px;
+  width: 30%;
 }
 
 .coin-percent {

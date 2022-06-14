@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { CurrencyContext } from "../contexts/CurrencyContext";
 import "../css/Coin.css";
 export default function Coin(props) {
+  const { currency } = useContext(CurrencyContext);
+
   return (
     <div className="coin-container">
       <div className="coin-row">
@@ -9,21 +13,48 @@ export default function Coin(props) {
           <p className="coin-symbol">{props.coin.symbol}</p>
         </div>
         <div className="coin-data">
-          <p className="coin-price">${props.coin.current_price}</p>
-          <p className="coin-volume">
-            ${props.coin.total_volume.toLocaleString()}
+          <p className="coin-price">
+            {props.coin.current_price ? (
+              props.coin.current_price.toLocaleString("en-US", {
+                style: "currency",
+                currency: currency,
+              })
+            ) : (
+              <p>N/A</p>
+            )}
           </p>
-          {props.coin.price_change_percentage_24h < 0 ? (
-            <p className="coin-percent red">
-              {props.coin.price_change_percentage_24h.toFixed(2)}%
-            </p>
+          <p className="coin-volume">
+            {props.coin.total_volume ? (
+              props.coin.total_volume.toLocaleString("en-US", {
+                style: "currency",
+                currency: currency,
+              })
+            ) : (
+              <p>N/A</p>
+            )}
+          </p>
+          {props.coin.price_change_percentage_24h ? (
+            props.coin.price_change_percentage_24h < 0 ? (
+              <p className="coin-percent red">
+                {props.coin.price_change_percentage_24h.toFixed(2)}%
+              </p>
+            ) : (
+              <p className="coin-percent green">
+                {props.coin.price_change_percentage_24h.toFixed(2)}%
+              </p>
+            )
           ) : (
-            <p className="coin-percent green">
-              {props.coin.price_change_percentage_24h.toFixed(2)}%
-            </p>
+            <p className="coin-percent">N/A</p>
           )}
           <p className="coin-marketCap">
-            Market Cap: ${props.coin.market_cap.toLocaleString()}
+            {props.coin.market_cap ? (
+              props.coin.market_cap.toLocaleString("en-US", {
+                style: "currency",
+                currency: currency,
+              })
+            ) : (
+              <p>N/A</p>
+            )}
           </p>
         </div>
       </div>
