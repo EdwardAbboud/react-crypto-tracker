@@ -37,8 +37,6 @@ export default function CoinView() {
     coin.name.toString().toLowerCase().includes(search.toString().toLowerCase())
   );
 
-  if (isLoading) <Loading />;
-
   return (
     <div>
       <SortBy handleSorting={handleSorting} />
@@ -56,11 +54,16 @@ export default function CoinView() {
         </form>
       </div>
       <InformationBar />
-      <div>
-        {filteredCoins.map((coin) => (
-          <Coin key={coin.id} coin={coin} />
-        ))}
-      </div>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div>
+          {filteredCoins.map((coin) => (
+            <Coin key={coin.id} coin={coin} />
+          ))}
+        </div>
+      )}
+
       {errorMessage}
     </div>
   );
