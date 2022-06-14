@@ -3,6 +3,7 @@ import Coin from "../components/Coin";
 import CurrencySelect from "../components/CurrencySelect";
 import InformationBar from "../components/InformationBar";
 import Loading from "../components/Loading";
+import Search from "../components/Search";
 import SortBy from "../components/SortBy";
 import { CurrencyContext } from "../contexts/CurrencyContext";
 import useFetch from "../hooks/useMarketFetch";
@@ -41,18 +42,7 @@ export default function CoinView() {
     <div>
       <SortBy handleSorting={handleSorting} />
       <CurrencySelect handleCurrency={handleCurrency} />
-
-      <div className="coin-search">
-        <h2 className="coin-text">Search coins</h2>
-        <form>
-          <input
-            type="text"
-            placeholder="Search"
-            className="coin-input"
-            onChange={handleChange}
-          />
-        </form>
-      </div>
+      <Search handleChange={handleChange} />
       <InformationBar />
       {isLoading ? (
         <Loading />
@@ -63,7 +53,6 @@ export default function CoinView() {
           ))}
         </div>
       )}
-
       {errorMessage}
     </div>
   );
