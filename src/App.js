@@ -1,43 +1,16 @@
-import { useState } from "react";
-import Coin from "./components/Coin";
-import Loading from "./components/Loading";
+import { FavoriteProvider } from "./contexts/CurrencyContext";
 import "./css/App.css";
-import useFetch from "./hooks/useFetch";
+import CoinView from "./views/CoinView";
 
 function App() {
-  const [search, setSearch] = useState([]);
-  const { data: coins, errorMessage, isLoading } = useFetch(`usd`);
-
-  const handleChange = (e) => {
-    setSearch(e.target.value);
-  };
-
-  const filteredCoins = coins.filter((coin) =>
-    coin.name.toString().toLowerCase().includes(search.toString().toLowerCase())
-  );
-
-  if (isLoading) <Loading />;
-
   return (
     <div className="App">
-      <div className="nav-bar">
-        <h1>Crypto-tracker</h1>
-        <div className="coin-search">
-          <h2 className="coin-text">Search coins</h2>
-          <form>
-            <input
-              type="text"
-              placeholder="Search"
-              className="coin-input"
-              onChange={handleChange}
-            />
-          </form>
+      <FavoriteProvider>
+        <div className="nav-bar">
+          <h1>Crypto-tracker</h1>
         </div>
-      </div>
-      {filteredCoins.map((coin) => (
-        <Coin key={coin.id} coin={coin} />
-      ))}
-      {errorMessage}
+        <CoinView />
+      </FavoriteProvider>
     </div>
   );
 }
