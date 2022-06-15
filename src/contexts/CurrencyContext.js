@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react";
 
 export const CurrencyContext = createContext();
 
-export const FavoriteProvider = (props) => {
+export const CurrencyProvider = (props) => {
   const [urlCurrency, setUrlCurrency] = useState(`eur`);
   const [currency, setCurrency] = useState(`EUR`);
 
