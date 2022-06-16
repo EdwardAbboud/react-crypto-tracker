@@ -1,0 +1,15 @@
+.search-sort-container {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 400px) {
+  .search-sort-container {
+    flex-direction: column;
+  }
+
+  .coin-search {
+    margin: auto;
+  }
+}

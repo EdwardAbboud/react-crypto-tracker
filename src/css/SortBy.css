@@ -1,0 +1,12 @@
+.sort-by {
+  height: 40px;
+  border: none;
+  margin: auto;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.sort-by:hover,
+.sort-by:focus {
+  outline: none;
+}

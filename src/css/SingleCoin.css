@@ -48,10 +48,11 @@
   width: 50%;
 }
 
-.coin-description {
+.coin-description-container {
   text-align: left;
   margin-top: 50px;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1250px) {

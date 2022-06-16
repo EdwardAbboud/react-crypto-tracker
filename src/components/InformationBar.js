@@ -1,4 +1,4 @@
-import icon from "../icon-icon.webp";
+import icon from "../assets/icon-icon.webp";
 import "../css/Coin.css";
 import "../css/InformationBar.css";
 
