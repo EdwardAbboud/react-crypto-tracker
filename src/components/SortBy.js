@@ -1,3 +1,4 @@
+import "../css/SortBy.css";
 export default function SortBy(props) {
   return (
     <div>
