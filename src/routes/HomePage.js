@@ -1,6 +1,6 @@
 import CoinView from "../views/CoinView";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div>
       <CoinView />

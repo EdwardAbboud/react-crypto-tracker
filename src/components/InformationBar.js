@@ -1,4 +1,7 @@
 import icon from "../icon-icon.webp";
+import "../css/Coin.css";
+import "../css/InformationBar.css";
+
 export default function InformationBar() {
   return (
     <div className="information-bar">

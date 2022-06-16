@@ -1,0 +1,14 @@
+.information-bar {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.information-bar h3 {
+  font-size: 1.2rem !important;
+}
+
+.information-bar .coin-volume,
+.information-bar .coin-marketCap {
+  margin-right: 10px;
+}
