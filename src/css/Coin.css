@@ -40,6 +40,7 @@
 .coin a {
   font-size: 15px;
   width: 50%;
+  max-width: 150px;
   text-overflow: ellipsis;
   overflow: hidden;
   text-align: left;

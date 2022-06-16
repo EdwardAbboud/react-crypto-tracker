@@ -4,7 +4,6 @@ export default function useFetch(endpoint) {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
-  const [repeater, setRepeater] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,8 +24,7 @@ export default function useFetch(endpoint) {
       }
     };
     fetchData();
-    // setTimeout(() => setRepeater((prevState) => prevState + 1), 30000);
-  }, [repeater, endpoint]);
+  }, [endpoint]);
 
   return { data, isLoading, errorMessage };
 }

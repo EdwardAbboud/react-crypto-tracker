@@ -16,7 +16,7 @@ export default function Coin(props) {
           <p className="coin-symbol">{props.coin.symbol}</p>
         </div>
         <div className="coin-data">
-          <p className="coin-price">
+          <div className="coin-price">
             {props.coin.current_price ? (
               props.coin.current_price.toLocaleString(
                 `${currency === "USD" ? "en-US" : "fr-FR"}`,
@@ -28,8 +28,8 @@ export default function Coin(props) {
             ) : (
               <p>N/A</p>
             )}
-          </p>
-          <p className="coin-volume">
+          </div>
+          <div className="coin-volume">
             {props.coin.total_volume ? (
               props.coin.total_volume.toLocaleString(
                 `${currency === "USD" ? "en-US" : "fr-FR"}`,
@@ -41,7 +41,7 @@ export default function Coin(props) {
             ) : (
               <p>N/A</p>
             )}
-          </p>
+          </div>
           {props.coin.price_change_percentage_24h ? (
             props.coin.price_change_percentage_24h < 0 ? (
               <p className="coin-percent red">
@@ -55,7 +55,7 @@ export default function Coin(props) {
           ) : (
             <p className="coin-percent">N/A</p>
           )}
-          <p className="coin-marketCap">
+          <div className="coin-marketCap">
             {props.coin.market_cap ? (
               props.coin.market_cap.toLocaleString(
                 `${currency === "USD" ? "en-US" : "fr-FR"}`,
@@ -67,7 +67,7 @@ export default function Coin(props) {
             ) : (
               <p>N/A</p>
             )}
-          </p>
+          </div>
         </div>
       </div>
     </div>
