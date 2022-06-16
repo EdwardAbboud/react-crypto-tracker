@@ -11,7 +11,7 @@ import Search from "../components/Search";
 import SortBy from "../components/SortBy";
 
 // Custom hooks
-import useFetch from "../hooks/useMarketFetch";
+import useFetch from "../hooks/useFetch";
 
 export default function CoinView() {
   const [search, setSearch] = useState([]);
@@ -19,11 +19,9 @@ export default function CoinView() {
   const { urlCurrency, changeUrlCurrency, changeCurrency } =
     useContext(CurrencyContext);
 
-  const {
-    data: coins,
-    errorMessage,
-    isLoading,
-  } = useFetch(urlCurrency, sortBy);
+  const urlEndpoint = `markets?vs_currency=${urlCurrency}&order=${sortBy}&per_page=100&page=1&sparkline=false`;
+
+  const { data: coins, errorMessage, isLoading } = useFetch(urlEndpoint);
 
   // Event handlers
   const handleChange = (e) => {
@@ -38,9 +36,17 @@ export default function CoinView() {
   };
 
   // Filter for search
-  const filteredCoins = coins.filter((coin) =>
-    coin.name.toString().toLowerCase().includes(search.toString().toLowerCase())
-  );
+  let filteredCoins;
+  if (coins == null) {
+    filteredCoins = [];
+  } else {
+    filteredCoins = coins.filter((coin) =>
+      coin.name
+        .toString()
+        .toLowerCase()
+        .includes(search.toString().toLowerCase())
+    );
+  }
 
   return (
     <div>

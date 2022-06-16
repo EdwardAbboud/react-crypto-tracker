@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CurrencyContext } from "../contexts/CurrencyContext";
 import "../css/Coin.css";
 export default function Coin(props) {
@@ -9,26 +10,34 @@ export default function Coin(props) {
       <div className="coin-row">
         <div className="coin">
           <img src={props.coin.image} alt={`${props.coin.id}-coin`} />
-          <h3>{props.coin.name}</h3>
+          <Link to={`coins/${props.coin.id}`}>
+            <h3>{props.coin.name}</h3>
+          </Link>
           <p className="coin-symbol">{props.coin.symbol}</p>
         </div>
         <div className="coin-data">
           <p className="coin-price">
             {props.coin.current_price ? (
-              props.coin.current_price.toLocaleString("en-US", {
-                style: "currency",
-                currency: currency,
-              })
+              props.coin.current_price.toLocaleString(
+                `${currency === "USD" ? "en-US" : "fr-FR"}`,
+                {
+                  style: "currency",
+                  currency: currency,
+                }
+              )
             ) : (
               <p>N/A</p>
             )}
           </p>
           <p className="coin-volume">
             {props.coin.total_volume ? (
-              props.coin.total_volume.toLocaleString("en-US", {
-                style: "currency",
-                currency: currency,
-              })
+              props.coin.total_volume.toLocaleString(
+                `${currency === "USD" ? "en-US" : "fr-FR"}`,
+                {
+                  style: "currency",
+                  currency: currency,
+                }
+              )
             ) : (
               <p>N/A</p>
             )}
@@ -48,10 +57,13 @@ export default function Coin(props) {
           )}
           <p className="coin-marketCap">
             {props.coin.market_cap ? (
-              props.coin.market_cap.toLocaleString("en-US", {
-                style: "currency",
-                currency: currency,
-              })
+              props.coin.market_cap.toLocaleString(
+                `${currency === "USD" ? "en-US" : "fr-FR"}`,
+                {
+                  style: "currency",
+                  currency: currency,
+                }
+              )
             ) : (
               <p>N/A</p>
             )}
