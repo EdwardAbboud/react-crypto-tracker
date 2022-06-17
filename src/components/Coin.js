@@ -13,7 +13,7 @@ export default function Coin(props) {
           <Link to={`coins/${props.coin.id}`}>
             <h3>{props.coin.name}</h3>
           </Link>
-          <p className="coin-symbol">{props.coin.symbol}</p>
+          <p className="coin-symbol">{props.coin.symbol.slice(0, 6)}</p>
         </div>
         <div className="coin-data">
           <div className="coin-price">
