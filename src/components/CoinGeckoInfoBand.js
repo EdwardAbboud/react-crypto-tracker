@@ -54,9 +54,10 @@ export default function CoinGeckoInfoBand() {
         <span className="green">methodology page.</span>
       </p>
       <br></br>
+      <br></br>
 
       <h4>Why are Cryptocurrency Prices Different on Exchanges?</h4>
-      <br></br>
+
       <p>
         You may notice that cryptocurrencies listed on different exchanges have
         different prices. The reasons for this are complex, but simply put
