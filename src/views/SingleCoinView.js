@@ -6,7 +6,7 @@ import useFetch from "../hooks/useFetch";
 export default function SingleCoinView() {
   const { id } = useParams();
 
-  const { data: coin, errorMessage, isLoading } = useFetch(id);
+  const { data: coin, errorMessage, isLoading } = useFetch(`coins/${id}`);
 
   return (
     <div>

@@ -6,7 +6,7 @@ import { CurrencyContext } from "../contexts/CurrencyContext";
 import Coin from "../components/Coin";
 import InformationBar from "../components/InformationBar";
 import Loading from "../components/Loading";
-import Search from "../components/PageSearch";
+import PageSearch from "../components/PageSearch";
 import SortBy from "../components/SortBy";
 import "../css/CoinView.css";
 
@@ -18,7 +18,7 @@ export default function CoinView() {
   const [sortBy, setSortBy] = useState(`market_cap_desc`);
   const { urlCurrency } = useContext(CurrencyContext);
 
-  const urlEndpoint = `markets?vs_currency=${urlCurrency}&order=${sortBy}&per_page=100&page=1&sparkline=false`;
+  const urlEndpoint = `coins/markets?vs_currency=${urlCurrency}&order=${sortBy}&per_page=100&page=1&sparkline=false`;
 
   const { data: coins, errorMessage, isLoading } = useFetch(urlEndpoint);
 
@@ -47,7 +47,7 @@ export default function CoinView() {
     <div>
       <div className="search-sort-container">
         <SortBy handleSorting={handleSorting} />
-        <Search handleChange={handlePageSearch} />
+        <PageSearch handleChange={handlePageSearch} />
       </div>
       <InformationBar />
       {isLoading ? (
