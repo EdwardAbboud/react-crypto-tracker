@@ -30,7 +30,7 @@ export default function Navbar() {
           <li>Watch list</li>
         </Link>
         <Link to={`/top-7`}>
-          <li>Top 7</li>
+          <li>Trending</li>
         </Link>
       </ul>
       <div className="selection-options">

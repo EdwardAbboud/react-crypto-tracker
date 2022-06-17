@@ -12,6 +12,7 @@ import "../css/CoinView.css";
 
 // Custom hooks
 import useFetch from "../hooks/useFetch";
+import Footer from "../components/Footer";
 
 export default function CoinView() {
   const [search, setSearch] = useState([]);
@@ -54,9 +55,11 @@ export default function CoinView() {
         <Loading />
       ) : (
         <div>
-          {filteredCoins.map((coin) => (
-            <Coin key={coin.id} coin={coin} />
-          ))}
+          <div>
+            {filteredCoins.map((coin) => (
+              <Coin key={coin.id} coin={coin} />
+            ))}
+          </div>
         </div>
       )}
       {errorMessage}

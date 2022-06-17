@@ -1,0 +1,25 @@
+.main-page-information {
+  width: 70vw;
+  text-align: left;
+  margin-top: 60px;
+}
+
+.main-page-information li {
+  margin-left: 30px;
+}
+
+.main-page-information p,
+.main-page-information li {
+  color: rgb(176, 176, 176);
+  font-size: 14px;
+}
+
+.main-page-information p {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .main-page-information {
+    width: 90vw;
+  }
+}
