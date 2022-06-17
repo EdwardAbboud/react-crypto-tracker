@@ -1,9 +1,18 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  width: 70vw;
+  margin: auto;
+  height: 100vh;
+}
+
 .lds-ellipsis {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
+
 .lds-ellipsis div {
   position: absolute;
   top: 33px;
