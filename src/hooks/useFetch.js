@@ -10,7 +10,7 @@ export default function useFetch(endpoint) {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://api.coingecko.com/api/v3/coins/${endpoint}`
+          `https://api.coingecko.com/api/v3/${endpoint}`
         );
 
         const data = await response.json();

@@ -6,6 +6,7 @@ import "./css/App.css";
 // Routes
 import CoinPage from "./routes/CoinPage";
 import HomePage from "./routes/HomePage";
+import TopSevenPage from "./routes/TopSevenPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<HomePage />} />
             <Route path="/coins/:id" element={<CoinPage />} />
+            <Route path="/top-7" element={<TopSevenPage />} />
           </Routes>
         </CurrencyProvider>
       </div>

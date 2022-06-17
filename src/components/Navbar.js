@@ -29,8 +29,8 @@ export default function Navbar() {
         <Link to={`/watch-list`}>
           <li>Watch list</li>
         </Link>
-        <Link to={`/top-10`}>
-          <li>Top 10</li>
+        <Link to={`/top-7`}>
+          <li>Top 7</li>
         </Link>
       </ul>
       <div className="selection-options">
