@@ -1,0 +1,24 @@
+.paginationbar-container {
+  display: flex;
+}
+
+.pagination-element{
+  background-color: #373737;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  border-radius: 5px;
+  display: flex;
+  height: 40px;
+}
+
+.page-number-display {
+  margin: auto 0.8rem auto 0.8rem;
+  width: 30px;
+}
+
+.pagination-button {
+  padding: 0.2rem;
+  border: none;
+  width: 50px;
+}

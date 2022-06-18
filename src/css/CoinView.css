@@ -1,6 +1,6 @@
 .search-sort-container {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
