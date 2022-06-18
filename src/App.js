@@ -6,6 +6,7 @@ import "./css/App.css";
 
 // Routes
 import CoinPage from "./routes/CoinPage";
+import FavoritesPage from "./routes/FavoritesPage";
 import HomePage from "./routes/HomePage";
 import TopSevenPage from "./routes/TopSevenPage";
 
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<HomePage />} />
             <Route path="/coins/:id" element={<CoinPage />} />
+            <Route path="/watch-list" element={<FavoritesPage />} />
             <Route path="/top-7" element={<TopSevenPage />} />
           </Routes>
         </CurrencyProvider>
