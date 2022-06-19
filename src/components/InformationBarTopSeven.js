@@ -1,12 +1,16 @@
 import "../css/TopSevenCoin.css";
 import icon from "../assets/icon-icon.webp";
 import "../css/InformationBar.css";
+import filled from "../assets/star-fill.png";
 
 export default function InformationBarTopSeven() {
   return (
     <div className="information-bar">
       <div className="coin-container">
         <div className="coin-row">
+          <div className="watch-list-icon-info">
+            <img alt="Watch list icon" src={filled} />
+          </div>
           <p className="coin-index-number">#</p>
           <div className="coin">
             <img src={icon} alt={`icon`} />

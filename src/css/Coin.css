@@ -36,6 +36,16 @@
   width: 20px;
   margin-right: 20px;
 }
+.watch-list-icon img,
+.watch-list-icon-info img {
+  height: 17px;
+  width: 17px;
+  margin-right: 20px;
+}
+.watch-list-icon img:hover,
+.watch-list-icon img:focus {
+  cursor: pointer;
+}
 
 .coin h3,
 .coin a {
