@@ -15,8 +15,6 @@ export default function TopSevenView() {
   const urlEndpoint = `search/trending`;
   const { data: allCoins, errorMessage, isLoading } = useFetch(urlEndpoint);
 
-  console.log(`This ALL top 7`, allCoins);
-
   // Event handlers
   const handlePageSearch = (e) => {
     setSearch(e.target.value);
@@ -33,7 +31,6 @@ export default function TopSevenView() {
         .toLowerCase()
         .includes(search.toString().toLowerCase())
     );
-    console.log(`This is filteredcoins`, filteredCoins);
   }
 
   return (
@@ -48,11 +45,11 @@ export default function TopSevenView() {
         <div>
           {filteredCoins.map((coin) => (
             <div>
-              {/* {filteredCoins.indexOf(coin)} */}
               <TopSevenCoin
                 key={coin.item.id}
                 coin={coin.item}
                 index={filteredCoins.indexOf(coin)}
+                id={coin.item.id}
               />
             </div>
           ))}

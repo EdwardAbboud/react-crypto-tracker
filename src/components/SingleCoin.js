@@ -20,8 +20,6 @@ export default function SingleCoin(props) {
     }
   };
 
-  console.log("SINGLECOIN", props.coin);
-
   return (
     <div>
       <div className="coin-page-container">

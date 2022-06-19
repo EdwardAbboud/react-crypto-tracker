@@ -1,12 +1,12 @@
 import PageTitle from "../components/PageTitle";
-import FavoritesView from "../views/FavoritesView";
+import WatchListView from "../views/WatchListView";
 
-export default function FavoritesPage() {
+export default function WatchListPage() {
   return (
     <div>
       <div>
         <PageTitle title={`Coins in your watch list`} />
-        <FavoritesView />
+        <WatchListView />
       </div>
     </div>
   );
