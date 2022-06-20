@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../css/Theme.css";
 import { setTheme } from "../utils/Themes";
+import sun from "../assets/sun.png";
+import moon from "../assets/moon.png";
 
 export default function ThemeToggle() {
   const [togClass, setTogClass] = useState("dark");
@@ -27,18 +29,20 @@ export default function ThemeToggle() {
   return (
     <div className="container--toggle">
       {togClass === "light" ? (
-        <input
+        <img
+          src={moon}
+          alt="moon icon"
           type="checkbox"
-          id="toggle"
-          className="toggle--checkbox"
+          className="toggle--checkbox moon-icon"
           onClick={handleOnClick}
           checked
         />
       ) : (
-        <input
+        <img
+          src={sun}
+          alt="sun icon"
           type="checkbox"
-          id="toggle"
-          className="toggle--checkbox"
+          className="toggle--checkbox sun-icon"
           onClick={handleOnClick}
         />
       )}

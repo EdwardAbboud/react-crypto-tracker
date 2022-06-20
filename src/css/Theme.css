@@ -18,3 +18,15 @@
   --white: #fff;
   --place-holder: #e2e2e2;
 }
+
+.moon-icon,
+.sun-icon {
+  width: 13px;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+
+.sun-icon {
+  filter: invert(1);
+  background-color: white;
+}
