@@ -22,7 +22,7 @@ function App() {
               <Route path="/" exact element={<HomePage />} />
               <Route path="/coins/:id" element={<CoinPage />} />
               <Route path="/watch-list" element={<WatchListPage />} />
-              <Route path="/top-7" element={<TopSevenPage />} />
+              <Route path="/trending" element={<TopSevenPage />} />
             </Routes>
           </WatchListProvider>
         </CurrencyProvider>

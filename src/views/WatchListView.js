@@ -4,6 +4,7 @@ import Loading from "../components/Loading";
 import InformationBar from "../components/InformationBar";
 import WatchedCoin from "../components/WatchedCoin";
 import PageSearch from "../components/PageSearch";
+import "../css/Errors.css";
 
 export default function Favorites() {
   const [coins, setCoins] = useState([]);
@@ -46,11 +47,16 @@ export default function Favorites() {
   if (coins == null) {
     filteredCoins = [];
   } else {
-    filteredCoins = coins.filter((coin) =>
-      coin.name
-        .toString()
-        .toLowerCase()
-        .includes(search.toString().toLowerCase())
+    filteredCoins = coins.filter(
+      (coin) =>
+        coin.name
+          .toString()
+          .toLowerCase()
+          .includes(search.toString().toLowerCase()) ||
+        coin.symbol
+          .toString()
+          .toLowerCase()
+          .includes(search.toString().toLowerCase())
     );
   }
 
@@ -65,7 +71,10 @@ export default function Favorites() {
       ) : (
         <div>
           {watchList.length === 0 ? (
-            <p> You haven't chosen any favorites yet!</p>
+            <p className="watch-list-error">
+              {" "}
+              Your watch list is still empty, please add some coins!
+            </p>
           ) : (
             <div>
               {filteredCoins.map((coin) => (

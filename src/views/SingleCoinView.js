@@ -16,7 +16,7 @@ export default function SingleCoinView() {
           <SingleCoin key={coin.id} coin={coin} />
         </div>
       )}
-      {errorMessage}
+      <p className="fetch-error">{errorMessage}</p>
     </div>
   );
 }

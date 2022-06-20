@@ -29,7 +29,7 @@ export default function Navbar() {
         <Link to={`/watch-list`}>
           <li>Watch list</li>
         </Link>
-        <Link to={`/top-7`}>
+        <Link to={`/trending`}>
           <li>Trending</li>
         </Link>
       </ul>
