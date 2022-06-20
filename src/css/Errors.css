@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 45px;
-  margin: 20vh auto;
-  border: 1px solid #414141;
+  margin: 0vh auto 25vh;
+  border: 1px solid var(--grey);
+  border-top: none;
 }

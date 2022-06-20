@@ -12,7 +12,7 @@ export default function InformationBar() {
             <img alt="Watch list icon" src={filled} />
           </div>
           <div className="coin">
-            <img src={icon} alt={`icon`} />
+            <img className="i-icon" src={icon} alt={`icon`} />
             <h3>Name</h3>
             <p className="coin-symbol">sym</p>
           </div>

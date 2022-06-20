@@ -10,7 +10,7 @@
   justify-items: start;
   align-items: center;
   height: 55px;
-  border-bottom: 1px solid rgb(92, 92, 92);
+  border-bottom: 1px solid var(--grey);
   width: 70vw;
   overflow: hidden;
 }

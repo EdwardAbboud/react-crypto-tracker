@@ -61,7 +61,7 @@ export default function TopSevenView() {
           ))}
         </div>
       )}
-      <p className="fetch-error">{errorMessage}</p>
+      {errorMessage && <p className="fetch-error">{errorMessage}</p>}
     </div>
   );
 }

@@ -84,7 +84,7 @@ export default function Favorites() {
           )}
         </div>
       )}
-      {errorMessage}
+      {errorMessage && <p className="fetch-error">{errorMessage}</p>}
     </div>
   );
 }

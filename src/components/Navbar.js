@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/coin-gecko-logo.webp";
 import { CurrencyContext } from "../contexts/CurrencyContext";
 import CurrencySelect from "./CurrencySelect";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const { changeUrlCurrency, changeCurrency } = useContext(CurrencyContext);
@@ -33,6 +34,9 @@ export default function Navbar() {
           <li>Trending</li>
         </Link>
       </ul>
+      <div className="theme-switch">
+        <ThemeToggle />
+      </div>
       <div className="selection-options">
         <CurrencySelect handleCurrency={handleCurrency} />
       </div>

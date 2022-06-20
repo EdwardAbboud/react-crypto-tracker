@@ -1,0 +1,20 @@
+.theme-dark {
+  --background: #121212;
+  --font: #fff;
+  --grey-font: #a0a0a0;
+  --grey: #5c5c5c;
+  --grey-elements: #373737;
+  --black: #121212;
+  --white: #fff;
+  --place-holder: #e2e2e2;
+}
+.theme-light {
+  --background: #fff;
+  --font: #373737;
+  --grey-font: #5c5c5c;
+  --grey: #c4c4c4;
+  --grey-elements: #818181;
+  --black: #121212;
+  --white: #fff;
+  --place-holder: #e2e2e2;
+}
