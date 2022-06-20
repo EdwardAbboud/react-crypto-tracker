@@ -14,7 +14,7 @@
 
 .page-number-display {
   margin: auto 0.8rem auto 0.8rem;
-  width: 60px;
+  width: 70px;
   border: 1px solid var(--grey-elements);
   background-color: transparent;
 }

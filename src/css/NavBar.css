@@ -2,7 +2,7 @@
   display: flex;
   border-top: 1px solid var(--grey);
   border-bottom: 1px solid var(--grey);
-  width: 70vw;
+  width: 100vw;
   height: 70px;
   margin-bottom: 30px;
 }
