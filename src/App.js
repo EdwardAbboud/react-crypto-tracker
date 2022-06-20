@@ -4,14 +4,20 @@ import Navbar from "./components/Navbar";
 import { CurrencyProvider } from "./contexts/CurrencyContext";
 import { WatchListProvider } from "./contexts/WatchListContext";
 import "./css/App.css";
+import { keepTheme } from "./utils/Themes";
 
 // Routes
 import CoinPage from "./routes/CoinPage";
 import HomePage from "./routes/HomePage";
 import TopSevenPage from "./routes/TopSevenPage";
 import WatchListPage from "./routes/WatchListPage";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    keepTheme();
+  });
+
   return (
     <Router>
       <div className="App">

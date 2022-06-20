@@ -13,6 +13,7 @@
   height: 200px;
   width: 100%;
   margin-top: 200px;
+  background-color: var(--black);
 }
 
 .disclaimer {
@@ -30,6 +31,11 @@
   background-color: #3f3f3f;
   width: 70%;
 }
+
+.disclaimer p {
+  color: white;
+}
+
 .disclaimer img {
   background-color: #3f3f3f;
   width: 20px;
@@ -37,13 +43,20 @@
 }
 
 .bottom-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70vw;
   margin: auto;
   height: 100px;
+  background-color: var(--black);
 }
 
 .bottom-footer p {
   padding: 50px 0px;
+  min-width: 100vw;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 @media screen and (max-width: 1280px) {

@@ -10,7 +10,7 @@
 
 .main-page-information p,
 .main-page-information li {
-  color: rgb(176, 176, 176);
+  color: var(--grey-font);
   font-size: 14px;
 }
 

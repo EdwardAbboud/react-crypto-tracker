@@ -1,10 +1,16 @@
 .information-bar {
   font-size: 1.2rem;
   font-weight: bold;
+  border-bottom: 1px solid var(--grey);
 }
 
 .information-bar h3 {
   font-size: 1rem !important;
+}
+
+.i-icon {
+  background-color: white;
+  border-radius: 50%;
 }
 
 .information-bar .coin-volume,

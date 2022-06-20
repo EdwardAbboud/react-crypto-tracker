@@ -4,7 +4,7 @@
 }
 
 .pagination-element {
-  background-color: #373737;
+  background-color: var(--grey-elements);
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -15,7 +15,7 @@
 .page-number-display {
   margin: auto 0.8rem auto 0.8rem;
   width: 60px;
-  border: 1px solid #373737;
+  border: 1px solid var(--grey-elements);
   background-color: transparent;
 }
 
@@ -24,6 +24,7 @@
   border: none;
   width: 50px;
   cursor: pointer;
+  color: var(--white);
 }
 
 .bottom-pagination {
