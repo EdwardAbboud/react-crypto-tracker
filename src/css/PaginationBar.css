@@ -1,0 +1,32 @@
+.pagination-bar-container {
+  display: flex;
+  margin-right: auto;
+}
+
+.pagination-element {
+  background-color: #373737;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  height: 40px;
+}
+
+.page-number-display {
+  margin: auto 0.8rem auto 0.8rem;
+  width: 40px;
+  border: 1px solid #373737;
+  background-color: transparent;
+}
+
+.pagination-button {
+  padding: 0.2rem;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+}
+
+.bottom-pagination {
+  width: 200px;
+  margin: 20px auto;
+}

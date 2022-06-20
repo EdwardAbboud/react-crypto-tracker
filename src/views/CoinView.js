@@ -6,6 +6,7 @@ import { CurrencyContext } from "../contexts/CurrencyContext";
 import Coin from "../components/Coin";
 import InformationBar from "../components/InformationBar";
 import Loading from "../components/Loading";
+import PaginationBar from "../components/PaginationBar";
 import PageSearch from "../components/PageSearch";
 import SortBy from "../components/SortBy";
 import "../css/CoinView.css";
@@ -16,9 +17,10 @@ import useFetch from "../hooks/useFetch";
 export default function CoinView() {
   const [search, setSearch] = useState([]);
   const [sortBy, setSortBy] = useState(`market_cap_desc`);
+  const [currentPage, setCurrentPage] = useState(1);
   const { urlCurrency } = useContext(CurrencyContext);
 
-  const urlEndpoint = `coins/markets?vs_currency=${urlCurrency}&order=${sortBy}&per_page=100&page=1&sparkline=false`;
+  const urlEndpoint = `coins/markets?vs_currency=${urlCurrency}&order=${sortBy}&per_page=100&page=${currentPage}&sparkline=false`;
 
   const { data: coins, errorMessage, isLoading } = useFetch(urlEndpoint);
 
@@ -48,12 +50,30 @@ export default function CoinView() {
     );
   }
 
+  // Pagination logic
+  const loadPrev = () => {
+    setCurrentPage((currentPage) => {
+      return currentPage > 1 ? currentPage - 1 : 1;
+    });
+  };
+  const loadNext = () => {
+    setCurrentPage((currentPage) => {
+      return currentPage < 135 ? currentPage + 1 : 135;
+    });
+  };
+
   return (
     <div>
       <div className="search-sort-container">
+        <PaginationBar
+          currentPage={currentPage}
+          loadPrev={loadPrev}
+          loadNext={loadNext}
+        />
         <SortBy handleSorting={handleSorting} />
         <PageSearch handleChange={handlePageSearch} />
       </div>
+
       <InformationBar />
       {isLoading ? (
         <Loading />
@@ -66,7 +86,15 @@ export default function CoinView() {
           </div>
         </div>
       )}
-      <p className="fetch-error">{errorMessage}</p>
+      <div className="bottom-pagination">
+        <PaginationBar
+          currentPage={currentPage}
+          loadPrev={loadPrev}
+          loadNext={loadNext}
+        />
+      </div>
+
+      {errorMessage && <p className="fetch-error">{errorMessage}</p>}
     </div>
   );
 }
