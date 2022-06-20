@@ -10,7 +10,7 @@ export default function PaginationBar(props) {
       />
       <div
         className="pagination-element page-number-display"
-        children={props.currentPage}
+        children={`${props.currentPage}/135`}
       />
       <button
         className="pagination-element pagination-button"

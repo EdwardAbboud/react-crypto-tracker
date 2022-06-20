@@ -46,6 +46,16 @@
   padding: 50px 0px;
 }
 
+@media screen and (max-width: 1280px) {
+  .disclaimer p,
+  .disclaimer span {
+    width: 95vw;
+  }
+
+  .disclaimer {
+    width: 100vw;
+  }
+}
 @media screen and (max-width: 700px) {
   .disclaimer p,
   .disclaimer span {
