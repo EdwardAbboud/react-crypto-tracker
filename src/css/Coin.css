@@ -1,7 +1,7 @@
 .coin-container {
   display: flex;
   justify-content: center;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .coin-row {
@@ -9,7 +9,7 @@
   flex-direction: row;
   justify-items: start;
   align-items: center;
-  height: 60px;
+  height: 55px;
   border-bottom: 1px solid rgb(92, 92, 92);
   width: 70vw;
   overflow: hidden;
@@ -100,6 +100,11 @@
   color: #11d811;
 }
 
+@media screen and (max-width: 1280px) {
+  .coin-row {
+    width: 95vw;
+  }
+}
 @media screen and (max-width: 1000px) {
   .coin-marketCap {
     display: none;

@@ -24,7 +24,7 @@ export default function Navbar() {
 
       <ul className="nav-links">
         <Link to={`/`}>
-          <li className="home-nav">Home</li>
+          <li className="home-nav">Cryptocurrencies</li>
         </Link>
         <Link to={`/watch-list`}>
           <li>Watch list</li>
