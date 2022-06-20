@@ -47,7 +47,7 @@ export default function WatchedCoin(props) {
         </div>
         <div className="coin">
           <img src={props.coin.image.large} alt={`${props.coin.id}-coin`} />
-          <Link to={`coins/${props.coin.id}`}>
+          <Link to={`../coins/${props.coin.id}`}>
             <h3>{props.coin.name}</h3>
           </Link>
           <p className="coin-symbol">{props.coin.symbol.slice(0, 6)}</p>

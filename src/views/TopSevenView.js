@@ -6,6 +6,7 @@ import InformationBarTopSeven from "../components/InformationBarTopSeven";
 import Loading from "../components/Loading";
 import PageSearch from "../components/PageSearch";
 import TopSevenCoin from "../components/TopSevenCoin";
+import "../css/Errors.css";
 
 // Custom hooks
 import useFetch from "../hooks/useFetch";
@@ -25,11 +26,16 @@ export default function TopSevenView() {
   if (allCoins == null) {
     filteredCoins = [];
   } else {
-    filteredCoins = allCoins.coins.filter((coin) =>
-      coin.item.name
-        .toString()
-        .toLowerCase()
-        .includes(search.toString().toLowerCase())
+    filteredCoins = allCoins.coins.filter(
+      (coin) =>
+        coin.item.name
+          .toString()
+          .toLowerCase()
+          .includes(search.toString().toLowerCase()) ||
+        coin.item.symbol
+          .toString()
+          .toLowerCase()
+          .includes(search.toString().toLowerCase())
     );
   }
 
@@ -55,7 +61,7 @@ export default function TopSevenView() {
           ))}
         </div>
       )}
-      {errorMessage}
+      <p className="fetch-error">{errorMessage}</p>
     </div>
   );
 }

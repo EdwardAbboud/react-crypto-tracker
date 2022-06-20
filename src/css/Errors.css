@@ -1,0 +1,9 @@
+.watch-list-error,
+.fetch-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  margin: 20vh auto;
+  border: 1px solid #414141;
+}

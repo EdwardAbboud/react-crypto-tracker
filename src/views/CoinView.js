@@ -35,11 +35,16 @@ export default function CoinView() {
   if (coins == null) {
     filteredCoins = [];
   } else {
-    filteredCoins = coins.filter((coin) =>
-      coin.name
-        .toString()
-        .toLowerCase()
-        .includes(search.toString().toLowerCase())
+    filteredCoins = coins.filter(
+      (coin) =>
+        coin.name
+          .toString()
+          .toLowerCase()
+          .includes(search.toString().toLowerCase()) ||
+        coin.symbol
+          .toString()
+          .toLowerCase()
+          .includes(search.toString().toLowerCase())
     );
   }
 
@@ -61,7 +66,7 @@ export default function CoinView() {
           </div>
         </div>
       )}
-      {errorMessage}
+      <p className="fetch-error">{errorMessage}</p>
     </div>
   );
 }
