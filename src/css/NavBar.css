@@ -1,3 +1,7 @@
+.active {
+  border-bottom: 2px solid #8dc647 !important;
+}
+
 .nav-bar {
   display: flex;
   border-top: 1px solid var(--grey);
@@ -38,6 +42,11 @@
   text-decoration: none;
   width: auto;
   margin-left: 25px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links li {
+  padding: 25px 0px 22px;
 }
 
 .nav-links li,
