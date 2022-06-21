@@ -15,18 +15,17 @@
   width: 30%;
   min-width: 300px;
   padding: 20px 10px;
-  border: 1px solid var(--font);
 }
 
 .coin-main img {
-  width: 200px;
+  width: 150px;
 }
 
 .coin-rank {
   width: fit-content;
   margin: 10px auto;
-  border: 1px solid var(--font);
-  background-color: var(--grey-elements);
+  border: 1px solid #dbdbdb;
+  background-color: #373737;
   border-radius: 5px;
   padding: 2px 8px;
   color: var(--white);
