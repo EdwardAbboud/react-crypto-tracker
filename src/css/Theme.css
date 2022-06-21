@@ -1,21 +1,23 @@
 .theme-dark {
   --background: #121212;
-  --font: #fff;
+  --font: #dbdbdb;
   --grey-font: #a0a0a0;
   --grey: #5c5c5c;
   --grey-elements: #373737;
+  --hover-row: #242424;
   --black: #121212;
-  --white: #fff;
+  --white: #dbdbdb;
   --place-holder: #e2e2e2;
 }
 .theme-light {
-  --background: #fff;
+  --background: #f9f9f9;
   --font: #373737;
   --grey-font: #5c5c5c;
   --grey: #c4c4c4;
-  --grey-elements: #818181;
+  --grey-elements: #d0d0d0;
+  --hover-row: #eaeaea;
   --black: #121212;
-  --white: #fff;
+  --white: #dbdbdb;
   --place-holder: #e2e2e2;
 }
 

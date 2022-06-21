@@ -24,7 +24,7 @@
   border: none;
   width: 50px;
   cursor: pointer;
-  color: var(--white);
+  color: var(--grey-font);
 }
 
 .bottom-pagination {

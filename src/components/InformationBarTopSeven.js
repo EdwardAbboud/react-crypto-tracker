@@ -7,7 +7,7 @@ export default function InformationBarTopSeven() {
   return (
     <div className="information-bar">
       <div className="coin-container">
-        <div className="coin-row">
+        <div className="coin-row information-row">
           <div className="watch-list-icon-info">
             <img alt="Watch list icon" src={filled} />
           </div>

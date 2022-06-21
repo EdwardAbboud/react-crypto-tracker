@@ -17,7 +17,12 @@
   height: 40px;
   border: none;
   background-color: var(--grey-elements);
-  color: #e2e2e2;
+  color: var(--font);
+}
+
+.coin-input::placeholder {
+  color: var(--grey-font);
+  opacity: 1;
 }
 
 .coin-input:focus {
