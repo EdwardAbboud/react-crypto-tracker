@@ -1,6 +1,6 @@
 import "../css/NavBar.css";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/coin-gecko-logo.webp";
 import { CurrencyContext } from "../contexts/CurrencyContext";
 import CurrencySelect from "./CurrencySelect";
@@ -24,15 +24,24 @@ export default function Navbar() {
       </div>
 
       <ul className="nav-links">
-        <Link to={`/`}>
+        <NavLink
+          to={`/`}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <li className="home-nav">Cryptocurrencies</li>
-        </Link>
-        <Link to={`/watch-list`}>
+        </NavLink>
+        <NavLink
+          to={`/watch-list`}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <li>Watch list</li>
-        </Link>
-        <Link to={`/trending`}>
+        </NavLink>
+        <NavLink
+          to={`/trending`}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           <li>Trending</li>
-        </Link>
+        </NavLink>
       </ul>
       <div className="theme-switch">
         <ThemeToggle />
