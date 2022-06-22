@@ -14,7 +14,7 @@
 }
 
 .i-icon {
-  background-color: white;
+  background-color: white !important;
   border-radius: 50%;
 }
 

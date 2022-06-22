@@ -13,7 +13,7 @@ export default function InformationBarTopSeven() {
           </div>
           <p className="coin-index-number">#</p>
           <div className="coin">
-            <img src={icon} alt={`icon`} />
+            <img className="i-icon" src={icon} alt={`icon`} />
             <h3 className="top-seven-name">Name</h3>
             <p className="coin-symbol-btc">SYM</p>
           </div>
