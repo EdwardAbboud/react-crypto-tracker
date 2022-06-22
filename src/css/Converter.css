@@ -1,0 +1,53 @@
+.converter-container {
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side-converter,
+.right-side-converter {
+  display: flex;
+  flex-direction: column;
+}
+
+.converter-container select {
+  width: 200px;
+  height: 50px;
+  margin: 0px 20px;
+  border: none;
+}
+
+.converter-container select:focus,
+.coin-amount-input:focus {
+  outline: none;
+}
+
+.coin-amount-input {
+  width: 200px;
+  height: 80px;
+  -webkit-appearance: none;
+  margin: 0;
+  font-size: 1.8rem;
+  border: 1px solid var(--font);
+}
+
+.converter-container select:hover {
+  cursor: pointer;
+}
+
+.converter-container h3 {
+  width: 200px;
+  height: 30px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
