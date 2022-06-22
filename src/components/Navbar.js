@@ -42,6 +42,12 @@ export default function Navbar() {
         >
           <li>Trending</li>
         </NavLink>
+        <NavLink
+          to={`/converter`}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          <li>Converter</li>
+        </NavLink>
       </ul>
       <div className="theme-switch">
         <ThemeToggle />
