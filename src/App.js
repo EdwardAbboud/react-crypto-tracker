@@ -12,6 +12,7 @@ import HomePage from "./routes/HomePage";
 import TopSevenPage from "./routes/TopSevenPage";
 import WatchListPage from "./routes/WatchListPage";
 import { useEffect } from "react";
+import ConverterPage from "./routes/ConverterPage";
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
               <Route path="/coins/:id" element={<CoinPage />} />
               <Route path="/watch-list" element={<WatchListPage />} />
               <Route path="/trending" element={<TopSevenPage />} />
+              <Route path="/converter" element={<ConverterPage />} />
             </Routes>
           </WatchListProvider>
         </CurrencyProvider>
