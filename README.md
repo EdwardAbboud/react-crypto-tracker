@@ -6,7 +6,7 @@ This project utilizes the Coin Gecko API. If you would like to checkout their do
 
 ## Deployed app
 
-If you wish to browse the finished web app you may do so [here](https://edwardabboud.github.io/)
+If you wish to browse the finished web app you may do so [here](https://edwardabboud.github.io/react-crypto-tracker/)
 
 ### Description
 
