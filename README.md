@@ -22,7 +22,7 @@ All results of this page are fetched as soon as the user has landed or interacte
 
 ## Screenshot
 <p>
-    <img src="../screenshots/SS1.png" width="220"/>
+    <img src="https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS1.png" width="220"/>
 </p>
 ([../screenshots/SS1.png](https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS1.png))
 ![Screenshot](SS2.png)
