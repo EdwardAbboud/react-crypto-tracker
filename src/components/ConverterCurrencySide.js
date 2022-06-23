@@ -11,19 +11,18 @@ export default function ConverterCurrencySide(props) {
           </option>
         ))}
       </select>
+
       <div>
-        {props.isConversionLoading ? (
-          <Loading />
-        ) : (
-          <form>
-            <input
-              type="number"
-              className="coin-amount-input currency-input"
-              onChange={props.handleCoinConversion}
-              placeholder={props.convertedCurrency}
-            />
-          </form>
-        )}
+        <form>
+          <input
+            type="number"
+            className="coin-amount-input currency-input"
+            onChange={props.handleCoinConversion}
+            placeholder={
+              props.isConversionLoading ? "" : props.convertedCurrency
+            }
+          />
+        </form>
       </div>
     </div>
   );
