@@ -31,3 +31,9 @@
   width: 200px;
   margin: 20px auto;
 }
+
+@media screen and (max-width: 400px) {
+  .pagination-bar-container {
+    margin: auto;
+  }
+}

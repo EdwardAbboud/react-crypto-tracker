@@ -25,6 +25,16 @@
   font-weight: bold;
 }
 
+.watch-list-two {
+  display: none;
+}
+
+.watch-list-two img {
+  width: 25px;
+  margin-bottom: -4px;
+  padding: 20px 0px 20px;
+}
+
 .logo-container img {
   height: 100%;
   padding: 18px 5px;
@@ -94,12 +104,18 @@
 }
 
 @media screen and (max-width: 750px) {
-  .logo-container h1 {
+  .logo-container h1,
+  .home-nav,
+  .watch-list-one {
     display: none;
   }
 
+  .watch-list-two {
+    display: block;
+  }
+
   .nav-bar {
-    width: 90vw;
+    width: 95vw;
   }
 }
 

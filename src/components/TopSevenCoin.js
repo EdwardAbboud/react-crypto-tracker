@@ -30,7 +30,7 @@ export default function TopSevenCoin(props) {
           />
         </div>
         <p className="coin-index">#{props.index + 1}</p>
-        <div className="coin">
+        <div id="btc-coin" className="coin">
           <img src={props.coin.large} alt={`${props.coin.id}-coin`} />
           <Link to={`../coins/${props.coin.id}`}>
             <h3 className="top-seven-name">{props.coin.name}</h3>

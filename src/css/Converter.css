@@ -29,6 +29,7 @@
   -webkit-appearance: none;
   margin: 0;
   font-size: 1.8rem;
+  padding: 5px 5px 5px 10px;
   border: 1px solid var(--font);
 }
 
@@ -50,4 +51,14 @@ input::-webkit-inner-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 600px) {
+  .converter-container {
+    flex-wrap: wrap;
+  }
+
+  .converter-container h3 {
+    margin: 50px 20px 0px;
+  }
 }

@@ -5,6 +5,7 @@ import logo from "../assets/coin-gecko-logo.webp";
 import { CurrencyContext } from "../contexts/CurrencyContext";
 import CurrencySelect from "./CurrencySelect";
 import ThemeToggle from "./ThemeToggle";
+import filled from "../assets/star-fill.png";
 
 export default function Navbar() {
   const { changeUrlCurrency, changeCurrency } = useContext(CurrencyContext);
@@ -26,15 +27,27 @@ export default function Navbar() {
       <ul className="nav-links">
         <NavLink
           to={`/`}
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) =>
+            isActive ? "active home-nav" : "home-nav"
+          }
         >
-          <li className="home-nav">Cryptocurrencies</li>
+          <li>Cryptocurrencies</li>
         </NavLink>
         <NavLink
           to={`/watch-list`}
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) =>
+            isActive ? "active watch-list-one" : "watch-list-one"
+          }
         >
           <li>Watch list</li>
+        </NavLink>
+        <NavLink
+          to={`/watch-list`}
+          className={({ isActive }) =>
+            isActive ? "active watch-list-two" : "watch-list-two"
+          }
+        >
+          <img alt="Watch list icon" src={filled} />
         </NavLink>
         <NavLink
           to={`/trending`}
