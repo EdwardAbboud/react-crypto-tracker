@@ -67,15 +67,28 @@ export default function ConverterView() {
   // convert input
   const handleCurrencyConversion = (e) => {
     e.preventDefault();
+
+    handleCurrencyReset();
     e.target.value
       ? setConvertedCurrency(e.target.value * conversion)
       : setConvertedCurrency(1 * conversion);
   };
   const handleCoinConversion = (e) => {
     e.preventDefault();
+    handleCoinReset();
     e.target.value
       ? setConvertedCoin((1 / conversion) * e.target.value)
       : setConvertedCoin(1);
+  };
+
+  // reset values when another input is activated
+  const handleCoinReset = () => {
+    const coinInput = document.querySelector(".coin-amount-input");
+    coinInput.value = "";
+  };
+  const handleCurrencyReset = () => {
+    const coinInput = document.querySelector(".currency-input");
+    coinInput.value = "";
   };
 
   return (
@@ -124,7 +137,7 @@ export default function ConverterView() {
             <form>
               <input
                 type="number"
-                className="coin-amount-input"
+                className="coin-amount-input currency-input"
                 onChange={handleCoinConversion}
                 placeholder={convertedCurrency}
               />
