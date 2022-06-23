@@ -21,13 +21,18 @@ Finally we have a converter page where the user is able to convert any of the 30
 All results of this page are fetched as soon as the user has landed or interacted with the page. No data is stored locally to prevent prices from freezing.
 
 ## Screenshot
-<p>
+<div>
+    <p>Screenshot 1/5</p>
     <img src="https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS1.png"/>
+    <p>Screenshot 2/5</p>
     <img src="https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS2.png"/>
+    <p>Screenshot 3/5</p>
     <img src="https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS3.png"/>
+    <p>Screenshot 4/5</p>
     <img src="https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS4.png"/>
+    <p>Screenshot 5/5</p>
     <img src="https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS5.png"/>
-</p>
+</div>
 
 ## Folder Structure
 
