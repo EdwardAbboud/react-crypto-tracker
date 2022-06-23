@@ -24,3 +24,20 @@
 .top-seven {
   text-align: center;
 }
+
+@media screen and (max-width: 450px) {
+  .coin-symbol-btc {
+    display: none;
+  }
+
+  #btc-coin {
+    padding: 0px !important;
+  }
+
+  .coin-price-btc {
+    margin: 0px;
+    margin-left: -50px;
+    width: 100px;
+    text-overflow: ellipsis !important;
+  }
+}
