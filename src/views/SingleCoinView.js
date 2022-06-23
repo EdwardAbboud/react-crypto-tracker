@@ -1,7 +1,12 @@
+// React
 import { useParams } from "react-router-dom";
+
+// custom hooks
+import useFetch from "../hooks/useFetch";
+
+// components
 import Loading from "../components/Loading";
 import SingleCoin from "../components/SingleCoin";
-import useFetch from "../hooks/useFetch";
 
 export default function SingleCoinView() {
   const { id } = useParams();

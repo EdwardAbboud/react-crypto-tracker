@@ -2,14 +2,16 @@
 import { useState } from "react";
 import InformationBarTopSeven from "../components/InformationBarTopSeven";
 
+// Custom hooks
+import useFetch from "../hooks/useFetch";
+
 // Component imports
 import Loading from "../components/Loading";
 import PageSearch from "../components/PageSearch";
 import TopSevenCoin from "../components/TopSevenCoin";
-import "../css/Errors.css";
 
-// Custom hooks
-import useFetch from "../hooks/useFetch";
+// Style
+import "../css/Errors.css";
 
 export default function TopSevenView() {
   const [search, setSearch] = useState([]);
