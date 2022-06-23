@@ -21,7 +21,9 @@ Finally we have a converter page where the user is able to convert any of the 30
 All results of this page are fetched as soon as the user has landed or interacted with the page. No data is stored locally to prevent prices from freezing.
 
 ## Screenshot
-
+<p>
+    <img src="../screenshots/SS1.png" width="220"/>
+</p>
 ([../screenshots/SS1.png](https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS1.png))
 ![Screenshot](SS2.png)
 ![Screenshot](https://github.com/EdwardAbboud/react-crypto-tracker/tree/main/public/screenshots/SS3.png "screenshot of app")
