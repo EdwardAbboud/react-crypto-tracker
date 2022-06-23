@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-crypto-tracker/static/css/main.d14b6d1a.css",
+    "main.js": "/react-crypto-tracker/static/js/main.7c7d3aa8.js",
+    "static/js/787.82dee966.chunk.js": "/react-crypto-tracker/static/js/787.82dee966.chunk.js",
+    "static/media/search-icon.png": "/react-crypto-tracker/static/media/search-icon.587ffbb2b02c2df0b950.png",
+    "static/media/star-fill.png": "/react-crypto-tracker/static/media/star-fill.d0cbd94e0a4a62fc2bf4.png",
+    "static/media/coin-gecko-logo.webp": "/react-crypto-tracker/static/media/coin-gecko-logo.eb6ba13c54aba28a0109.webp",
+    "static/media/moon.png": "/react-crypto-tracker/static/media/moon.e5585e508bad58301c6c.png",
+    "static/media/risk.png": "/react-crypto-tracker/static/media/risk.df852aceb9e7af984714.png",
+    "static/media/icon-icon.webp": "/react-crypto-tracker/static/media/icon-icon.70d21e608ef629d94ea6.webp",
+    "index.html": "/react-crypto-tracker/index.html",
+    "main.d14b6d1a.css.map": "/react-crypto-tracker/static/css/main.d14b6d1a.css.map",
+    "main.7c7d3aa8.js.map": "/react-crypto-tracker/static/js/main.7c7d3aa8.js.map",
+    "787.82dee966.chunk.js.map": "/react-crypto-tracker/static/js/787.82dee966.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d14b6d1a.css",
+    "static/js/main.7c7d3aa8.js"
+  ]
+}
