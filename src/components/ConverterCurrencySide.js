@@ -1,5 +1,3 @@
-import Loading from "./Loading";
-
 export default function ConverterCurrencySide(props) {
   return (
     <div className="right-side-converter">
