@@ -22,7 +22,7 @@ All results of this page are fetched as soon as the user has landed or interacte
 
 ## Screenshot
 
-![Screenshot]([../screenshots/SS1.png](https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS1.png))
+([../screenshots/SS1.png](https://github.com/EdwardAbboud/react-crypto-tracker/blob/main/public/screenshots/SS1.png))
 ![Screenshot](SS2.png)
 ![Screenshot](https://github.com/EdwardAbboud/react-crypto-tracker/tree/main/public/screenshots/SS3.png "screenshot of app")
 ![Screenshot](https://github.com/EdwardAbboud/react-crypto-tracker/tree/main/public/screenshots/SS4.png "screenshot of app")
