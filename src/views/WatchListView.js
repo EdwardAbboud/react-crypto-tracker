@@ -1,9 +1,16 @@
+// React
 import React, { useContext, useEffect, useState } from "react";
+
+// Context
 import { WatchListContext } from "../contexts/WatchListContext";
+
+// Component
 import Loading from "../components/Loading";
 import InformationBar from "../components/InformationBar";
 import WatchedCoin from "../components/WatchedCoin";
 import PageSearch from "../components/PageSearch";
+
+// Style
 import "../css/Errors.css";
 
 export default function Favorites() {

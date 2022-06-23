@@ -7,6 +7,10 @@ import useFetch from "../hooks/useFetch";
 // components
 import currencies from "../data/TopCurrencies.js";
 import Loading from "../components/Loading";
+import ConverterCoinSide from "../components/ConverterCoinSide";
+import ConverterCurrencySide from "../components/ConverterCurrencySide";
+
+// style
 import "../css/Converter.css";
 
 export default function ConverterView() {
@@ -96,55 +100,22 @@ export default function ConverterView() {
       {loadingFetch ? (
         <Loading />
       ) : (
-        <div className="left-side-converter">
-          <div className="coin-section">
-            <h3>Coin</h3>
-            <select defaultValue={"bitcoin"} onChange={changeCoin}>
-              {coins?.map((coin) => (
-                <option key={coin.id} value={coin.id}>
-                  {coin.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <form>
-              <input
-                type="number"
-                className="coin-amount-input"
-                onChange={handleCurrencyConversion}
-                placeholder={convertedCoin}
-              />
-            </form>
-          </div>
-        </div>
+        <ConverterCoinSide
+          changeCoin={changeCoin}
+          coins={coins}
+          handleCurrencyConversion={handleCurrencyConversion}
+          convertedCoin={convertedCoin}
+        />
       )}
       {fetchError && <p className="fetch-error">{fetchError}</p>}
 
-      <div className="right-side-converter">
-        <h3>Currency</h3>
-        <select defaultValue={"eur"} onChange={changeCurrency}>
-          {currencies.map((currency) => (
-            <option key={currency.id} value={currency.id}>
-              {currency.name}
-            </option>
-          ))}
-        </select>
-        <div>
-          {isConversionLoading ? (
-            <Loading />
-          ) : (
-            <form>
-              <input
-                type="number"
-                className="coin-amount-input currency-input"
-                onChange={handleCoinConversion}
-                placeholder={convertedCurrency}
-              />
-            </form>
-          )}
-        </div>
-      </div>
+      <ConverterCurrencySide
+        changeCurrency={changeCurrency}
+        currencies={currencies}
+        isConversionLoading={isConversionLoading}
+        handleCoinConversion={handleCoinConversion}
+        convertedCurrency={convertedCurrency}
+      />
 
       {errorConvertingMessage && (
         <p className="fetch-error">{errorConvertingMessage}</p>

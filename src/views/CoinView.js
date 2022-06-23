@@ -2,6 +2,9 @@
 import { useContext, useState } from "react";
 import { CurrencyContext } from "../contexts/CurrencyContext";
 
+// Custom hooks
+import useFetch from "../hooks/useFetch";
+
 // Component imports
 import Coin from "../components/Coin";
 import InformationBar from "../components/InformationBar";
@@ -9,10 +12,9 @@ import Loading from "../components/Loading";
 import PaginationBar from "../components/PaginationBar";
 import PageSearch from "../components/PageSearch";
 import SortBy from "../components/SortBy";
-import "../css/CoinView.css";
 
-// Custom hooks
-import useFetch from "../hooks/useFetch";
+// Style
+import "../css/CoinView.css";
 
 export default function CoinView() {
   const [search, setSearch] = useState([]);
